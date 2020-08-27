@@ -4,7 +4,7 @@
     <form>
       <div class="form-group">
         <label for="name">Customer Name:</label>
-        <input type="text" class="form-control" id="email">
+        <input type="text" class="form-control" id="customerName">
       </div>
       <div class="form-group">
         <label for="contactNum">Contact Number:</label>
@@ -12,7 +12,7 @@
       </div>
       <div class="form-group">
         <label for="address">Address:</label>
-        <input type="text" class="form-control" id="pwd">
+        <input type="text" class="form-control" id="address">
       </div>
       <button type="submit" class="btn btn-primary">Save</button>
     </form>`

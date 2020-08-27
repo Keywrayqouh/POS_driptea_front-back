@@ -380,7 +380,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", id: "email" }
+            attrs: { type: "text", id: "customerName" }
           })
         ]),
         _vm._v(" "),
@@ -400,7 +400,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("input", {
             staticClass: "form-control",
-            attrs: { type: "text", id: "pwd" }
+            attrs: { type: "text", id: "address" }
           })
         ]),
         _vm._v(" "),
