@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 93:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(14)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(94)
+var __vue_template__ = __webpack_require__(71)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -25,7 +25,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/views/Header.vue"
+Component.options.__file = "resources/assets/js/basic/Header.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -34,9 +34,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11ad97a0", Component.options)
+    hotAPI.createRecord("data-v-774945e0", Component.options)
   } else {
-    hotAPI.reload("data-v-11ad97a0", Component.options)
+    hotAPI.reload("data-v-774945e0", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -48,7 +48,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 94:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -64,7 +64,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "nav",
-      { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
+      { staticClass: "navbar navbar-expand-lg navbar-dark bg-success" },
       [
         _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
           _vm._v("Navbar")
@@ -193,7 +193,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-11ad97a0", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-774945e0", module.exports)
   }
 }
 

@@ -4,15 +4,15 @@ export default{
         {
             path: '/',
             name: 'home',
-            component: resolve => require(['@/assets/js/views/Home'], resolve),
+            component: resolve => require(['@/assets/js/basic/Home'], resolve),
             meta: {
                 tokenRequired: false
             }
         },
         {
-            path: '/hello',
-            name: 'hello',
-            component: resolve => require(['@/assets/js/views/Hello'], resolve),
+            path: '/register',
+            name: 'register',
+            component: resolve => require(['@/assets/js/basic/Register'], resolve),
             meta: {
                 tokenRequired: false
             }
@@ -20,7 +20,7 @@ export default{
         {
             path: '/header',
             name: 'header',
-            component: resolve => require(['@/assets/js/views/Header'], resolve),
+            component: resolve => require(['@/assets/js/basic/Header'], resolve),
             meta: {
                 tokenRequired: false
             }

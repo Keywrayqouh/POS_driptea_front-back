@@ -1,7 +1,7 @@
 import AUTH from '../services/auth'
 let beforeEnter = (to, from, next) => {
-  localStorage.setItem('usertoken', 'abcde')
-  localStorage.setItem('usertoken', 'abcde')
+  // localStorage.setItem('usertoken', 'abcde')
+  // localStorage.setItem('usertoken', 'abcde')
   // TODO Redirect if no token when token is required in meta.tokenRequired
   AUTH.currentPath = to.path
   let userID = parseInt(localStorage.getItem('account_id'))
@@ -28,7 +28,7 @@ let routes = [
   {
     path: '/',
     name: 'home',
-    component: resolve => require(['@/assets/js/views/Home'], resolve),
+    component: resolve => require(['@/assets/js/basic/Home'], resolve),
     beforeEnter: beforeEnter
   }
 ]

@@ -1,24 +1,24 @@
 webpackJsonp([1],{
 
-/***/ 48:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(56)
+  __webpack_require__(76)
 }
-var normalizeComponent = __webpack_require__(4)
+var normalizeComponent = __webpack_require__(14)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(78)
 /* template */
-var __vue_template__ = __webpack_require__(60)
+var __vue_template__ = __webpack_require__(79)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-6c0a33b2"
+var __vue_scopeId__ = "data-v-2badb436"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -29,7 +29,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/views/Home.vue"
+Component.options.__file = "resources/assets/js/basic/Register.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -38,9 +38,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6c0a33b2", Component.options)
+    hotAPI.createRecord("data-v-2badb436", Component.options)
   } else {
-    hotAPI.reload("data-v-6c0a33b2", Component.options)
+    hotAPI.reload("data-v-2badb436", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -52,23 +52,23 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 56:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(77);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(58)("2d3ba7d6", content, false, {});
+var update = __webpack_require__(15)("f7e4684a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6c0a33b2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6c0a33b2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2badb436\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Register.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2badb436\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Register.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -79,347 +79,495 @@ if(false) {
 
 /***/ }),
 
-/***/ 57:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(53)(false);
+exports = module.exports = __webpack_require__(4)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.container[data-v-6c0a33b2] {\n  width: 50%;\n}\n", ""]);
+exports.push([module.i, "\nspan[data-v-2badb436] {\n  font-size: 12px;\n}\nhr[data-v-2badb436] {\n  border: 1px solid #17D817;\n}\n.termsCondition[data-v-2badb436] {\n  margin-top: 6%;\n  font-size: 15px;\n  text-align: center;\n}\n.form-control[data-v-2badb436] {\n  border: 1px solid #17D817;\n  border-radius: 5px;\n}\n.bRegister[data-v-2badb436] {\n  color: #0A8C0F;\n  cursor: pointer;\n}\np[data-v-2badb436] {\n  font-size: 20px;\n}\n.btnRegister[data-v-2badb436] {\n  margin-top: 2%;\n  margin-bottom: 2%;\n  background-color: #17D817;\n  font-weight: bold;\n  width: 100%;\n}\n.containerWidth[data-v-2badb436] {\n  text-align: left;\n  width: 30%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 58:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 78:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-  Modified by Evan You @yyx990803
-*/
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_logo_png__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_logo_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__image_logo_png__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-var hasDocument = typeof document !== 'undefined'
 
-if (typeof DEBUG !== 'undefined' && DEBUG) {
-  if (!hasDocument) {
-    throw new Error(
-    'vue-style-loader cannot be used in a non-browser environment. ' +
-    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
-  ) }
-}
 
-var listToStyles = __webpack_require__(59)
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "app",
+    data: function data() {
+        return {
+            image: __WEBPACK_IMPORTED_MODULE_1__image_logo_png___default.a,
+            username: '',
+            email: '',
+            password: '',
+            confirmPass: '',
+            successMessage: null,
+            errorMessage: null,
+            errorMessage2: null,
+            errorMessage3: null,
+            errorMessage4: null,
+            errorMessage5: null,
+            errorMessage6: null,
+            errorMessage7: null
+        };
+    },
 
-/*
-type StyleObject = {
-  id: number;
-  parts: Array<StyleObjectPart>
-}
-
-type StyleObjectPart = {
-  css: string;
-  media: string;
-  sourceMap: ?string
-}
-*/
-
-var stylesInDom = {/*
-  [id: number]: {
-    id: number,
-    refs: number,
-    parts: Array<(obj?: StyleObjectPart) => void>
-  }
-*/}
-
-var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
-var singletonElement = null
-var singletonCounter = 0
-var isProduction = false
-var noop = function () {}
-var options = null
-var ssrIdKey = 'data-vue-ssr-id'
-
-// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-// tags it will allow on a page
-var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
-
-module.exports = function (parentId, list, _isProduction, _options) {
-  isProduction = _isProduction
-
-  options = _options || {}
-
-  var styles = listToStyles(parentId, list)
-  addStylesToDom(styles)
-
-  return function update (newList) {
-    var mayRemove = []
-    for (var i = 0; i < styles.length; i++) {
-      var item = styles[i]
-      var domStyle = stylesInDom[item.id]
-      domStyle.refs--
-      mayRemove.push(domStyle)
-    }
-    if (newList) {
-      styles = listToStyles(parentId, newList)
-      addStylesToDom(styles)
-    } else {
-      styles = []
-    }
-    for (var i = 0; i < mayRemove.length; i++) {
-      var domStyle = mayRemove[i]
-      if (domStyle.refs === 0) {
-        for (var j = 0; j < domStyle.parts.length; j++) {
-          domStyle.parts[j]()
+    methods: {
+        redirect: function redirect(route) {
+            __WEBPACK_IMPORTED_MODULE_0__router__["a" /* default */].push(route).catch(function () {});
+        },
+        validate: function validate(input) {
+            this.successMessage = null;
+            var reqWhiteSpace = /\s/;
+            if (input === 'username') {
+                this.errorMessage = null;
+                if (reqWhiteSpace.test(this.username)) {
+                    this.errorMessage = 'Username should not contain a space.';
+                } else if (this.username.length < 6) {
+                    this.errorMessage2 = 'Username must be atleast 6 characters.';
+                } else {
+                    this.errorMessage = null;
+                    this.errorMessage2 = null;
+                }
+            } else if (input === 'email') {
+                this.errorMessage3 = null;
+                if (this.validateEmail(this.email) === false) {
+                    this.errorMessage3 = 'You have entered an invalid email address.';
+                } else {
+                    this.errorMessage3 = null;
+                }
+            } else if (input === 'password') {
+                this.errorMessage4 = null;
+                if (this.password.length < 8) {
+                    this.errorMessage4 = 'Password must be atleast 8 characters.';
+                } else if (/^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/.test(this.password)) {
+                    this.successMessage = 'Strong password.';
+                    this.errorMessage4 = null;
+                    this.errorMessage5 = null;
+                } else {
+                    this.errorMessage5 = 'Password must be alphanumeric characters. It should contain 1 number, 1 special character and 1 capital letter.';
+                }
+            } else if (input === 'confirmPass') {
+                this.errorMessage6 = null;
+                this.successMessage = null;
+                if (this.password.localeCompare(this.confirmPass) !== 0) {
+                    this.errorMessage6 = 'Password did not match.';
+                } else {
+                    this.errorMessage6 = null;
+                }
+            } else if (this.username.length >= 6 && this.email !== null && this.password !== null && this.password.length >= 6 && this.password.localeCompare(this.confirmPass) === 0 && this.type !== null && AUTH.validateEmail(this.email) === true) {
+                this.errorMessage = null;
+            } else {
+                this.errorMessage7 = 'Please fill in all required fields.';
+                this.errorMessage7 = null;
+            }
+        },
+        validateEmail: function validateEmail(email) {
+            var reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+.[a-zA-Z0-9]*$/;
+            if (reg.test(email) === false) {
+                return false;
+            } else {
+                return true;
+            }
         }
-        delete stylesInDom[domStyle.id]
-      }
     }
-  }
-}
-
-function addStylesToDom (styles /* Array<StyleObject> */) {
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i]
-    var domStyle = stylesInDom[item.id]
-    if (domStyle) {
-      domStyle.refs++
-      for (var j = 0; j < domStyle.parts.length; j++) {
-        domStyle.parts[j](item.parts[j])
-      }
-      for (; j < item.parts.length; j++) {
-        domStyle.parts.push(addStyle(item.parts[j]))
-      }
-      if (domStyle.parts.length > item.parts.length) {
-        domStyle.parts.length = item.parts.length
-      }
-    } else {
-      var parts = []
-      for (var j = 0; j < item.parts.length; j++) {
-        parts.push(addStyle(item.parts[j]))
-      }
-      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
-    }
-  }
-}
-
-function createStyleElement () {
-  var styleElement = document.createElement('style')
-  styleElement.type = 'text/css'
-  head.appendChild(styleElement)
-  return styleElement
-}
-
-function addStyle (obj /* StyleObjectPart */) {
-  var update, remove
-  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
-
-  if (styleElement) {
-    if (isProduction) {
-      // has SSR styles and in production mode.
-      // simply do nothing.
-      return noop
-    } else {
-      // has SSR styles but in dev mode.
-      // for some reason Chrome can't handle source map in server-rendered
-      // style tags - source maps in <style> only works if the style tag is
-      // created and inserted dynamically. So we remove the server rendered
-      // styles and inject new ones.
-      styleElement.parentNode.removeChild(styleElement)
-    }
-  }
-
-  if (isOldIE) {
-    // use singleton mode for IE9.
-    var styleIndex = singletonCounter++
-    styleElement = singletonElement || (singletonElement = createStyleElement())
-    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
-    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
-  } else {
-    // use multi-style-tag mode in all other cases
-    styleElement = createStyleElement()
-    update = applyToTag.bind(null, styleElement)
-    remove = function () {
-      styleElement.parentNode.removeChild(styleElement)
-    }
-  }
-
-  update(obj)
-
-  return function updateStyle (newObj /* StyleObjectPart */) {
-    if (newObj) {
-      if (newObj.css === obj.css &&
-          newObj.media === obj.media &&
-          newObj.sourceMap === obj.sourceMap) {
-        return
-      }
-      update(obj = newObj)
-    } else {
-      remove()
-    }
-  }
-}
-
-var replaceText = (function () {
-  var textStore = []
-
-  return function (index, replacement) {
-    textStore[index] = replacement
-    return textStore.filter(Boolean).join('\n')
-  }
-})()
-
-function applyToSingletonTag (styleElement, index, remove, obj) {
-  var css = remove ? '' : obj.css
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = replaceText(index, css)
-  } else {
-    var cssNode = document.createTextNode(css)
-    var childNodes = styleElement.childNodes
-    if (childNodes[index]) styleElement.removeChild(childNodes[index])
-    if (childNodes.length) {
-      styleElement.insertBefore(cssNode, childNodes[index])
-    } else {
-      styleElement.appendChild(cssNode)
-    }
-  }
-}
-
-function applyToTag (styleElement, obj) {
-  var css = obj.css
-  var media = obj.media
-  var sourceMap = obj.sourceMap
-
-  if (media) {
-    styleElement.setAttribute('media', media)
-  }
-  if (options.ssrId) {
-    styleElement.setAttribute(ssrIdKey, obj.id)
-  }
-
-  if (sourceMap) {
-    // https://developer.chrome.com/devtools/docs/javascript-debugging
-    // this makes source maps inside style tags work properly in Chrome
-    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
-    // http://stackoverflow.com/a/26603875
-    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
-  }
-
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild)
-    }
-    styleElement.appendChild(document.createTextNode(css))
-  }
-}
-
+});
 
 /***/ }),
 
-/***/ 59:
-/***/ (function(module, exports) {
-
-/**
- * Translates the list format produced by css-loader into something
- * easier to manipulate.
- */
-module.exports = function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
-
-
-/***/ }),
-
-/***/ 60:
+/***/ 79:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("h1", [_vm._v("Customer Details")]),
-      _vm._v(" "),
-      _c("form", [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "name" } }, [_vm._v("Customer Name:")]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", id: "customerName" }
-          })
-        ]),
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("center", [
+        _c("img", {
+          staticStyle: { height: "150px", "margin-top": "1%" },
+          attrs: { src: _vm.image },
+          on: {
+            click: function($event) {
+              return _vm.redirect("/")
+            }
+          }
+        }),
         _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "contactNum" } }, [
-            _vm._v("Contact Number:")
+        _c("p", [
+          _vm._v("Register to "),
+          _c(
+            "b",
+            {
+              staticClass: "bRegister",
+              on: {
+                click: function($event) {
+                  return _vm.redirect("/")
+                }
+              }
+            },
+            [_vm._v("Driptea")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("center", [
+        _c("div", { staticClass: "containerWidth" }, [
+          _c("i", [
+            _vm.errorMessage7 !== null
+              ? _c("span", { staticClass: "text-danger text-center" }, [
+                  _vm._v(_vm._s(_vm.errorMessage7))
+                ])
+              : _vm._e()
           ]),
           _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", id: "contactNum" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "address" } }, [_vm._v("Address:")]),
+          _c("form", [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "username" } }, [
+                _vm._v("Username:")
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _c("i", [
+                _vm.errorMessage !== null
+                  ? _c("span", { staticClass: "text-danger text-center" }, [
+                      _vm._v(_vm._s(_vm.errorMessage))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("i", [
+                _vm.errorMessage2 !== null
+                  ? _c("span", { staticClass: "text-danger text-center" }, [
+                      _vm._v(_vm._s(_vm.errorMessage2))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.username,
+                    expression: "username"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", id: "username" },
+                domProps: { value: _vm.username },
+                on: {
+                  keyup: function($event) {
+                    return _vm.validate("username")
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.username = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "email" } }, [_vm._v("Email:")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("i", [
+                _vm.errorMessage3 !== null
+                  ? _c("span", { staticClass: "text-danger text-center" }, [
+                      _vm._v(_vm._s(_vm.errorMessage3))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "email", id: "email" },
+                domProps: { value: _vm.email },
+                on: {
+                  keyup: function($event) {
+                    return _vm.validate("email")
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "password" } }, [
+                _vm._v("Password:")
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _vm.successMessage !== null
+                ? _c("span", { staticClass: "text-success text-center" }, [
+                    _vm._v(_vm._s(_vm.successMessage))
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("i", [
+                _vm.errorMessage4 !== null
+                  ? _c("span", { staticClass: "text-danger text-center" }, [
+                      _vm._v(_vm._s(_vm.errorMessage4))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("i", [
+                _vm.errorMessage5 !== null
+                  ? _c("span", { staticClass: "text-danger text-center" }, [
+                      _vm._v(_vm._s(_vm.errorMessage5))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.password,
+                    expression: "password"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "password", id: "password" },
+                domProps: { value: _vm.password },
+                on: {
+                  keyup: function($event) {
+                    return _vm.validate("password")
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.password = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "confirmPassword" } }, [
+                _vm._v("Confirm password:")
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _c("i", [
+                _vm.errorMessage6 !== null
+                  ? _c("span", { staticClass: "text-danger text-center" }, [
+                      _vm._v(_vm._s(_vm.errorMessage6))
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.confirmPass,
+                    expression: "confirmPass"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "confirmPassword", id: "confirmPassword" },
+                domProps: { value: _vm.confirmPass },
+                on: {
+                  keyup: function($event) {
+                    return _vm.validate("confirmPass")
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.confirmPass = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btnRegister", attrs: { type: "submit" } },
+              [_vm._v("Register")]
+            )
+          ]),
           _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", id: "address" }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-          [_vm._v("Save")]
-        )
-      ]),
-      _vm._v("`\n")
-    ])
-  }
-]
+          _c("div", [
+            _c("label", { staticClass: "termsCondition" }, [
+              _vm._v("By signing up, you agree to our "),
+              _c(
+                "b",
+                {
+                  staticClass: "bRegister",
+                  on: {
+                    click: function($event) {
+                      return _vm.redirect("/")
+                    }
+                  }
+                },
+                [_vm._v("Terms")]
+              ),
+              _vm._v(" and "),
+              _c(
+                "b",
+                {
+                  staticClass: "bRegister",
+                  on: {
+                    click: function($event) {
+                      return _vm.redirect("/")
+                    }
+                  }
+                },
+                [_vm._v("Conditions")]
+              )
+            ]),
+            _c("hr")
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("label", { staticClass: "termsCondition" }, [
+              _vm._v("Already have an account? "),
+              _c(
+                "b",
+                {
+                  staticClass: "bRegister",
+                  on: {
+                    click: function($event) {
+                      return _vm.redirect("/")
+                    }
+                  }
+                },
+                [_vm._v("Login")]
+              )
+            ])
+          ])
+        ])
+      ])
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6c0a33b2", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-2badb436", module.exports)
   }
 }
 
