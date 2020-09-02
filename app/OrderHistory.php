@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class OrderHistory extends Model
 {
     protected $fillable = [
-        'accountId', 'productId', 'quantity', 'size', 'status'
+        'accountId', 'productId', 'orderNumber', 'orderId', 'status'
     ];
 }

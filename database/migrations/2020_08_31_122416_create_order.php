@@ -14,12 +14,12 @@ class CreateOrder extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->increments('id')->index();
+            $table->increments('id');
             $table->bigInteger('accountId');
-            $table->string('productName');
+            $table->string('productId');
             $table->integer('quantity');
-            $table->double('price');
-            $table->double('subTotal');
+            $table->string('size');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

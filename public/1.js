@@ -1,18 +1,18 @@
 webpackJsonp([1],{
 
-/***/ 75:
+/***/ 61:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(76)
+  __webpack_require__(66)
 }
-var normalizeComponent = __webpack_require__(14)
+var normalizeComponent = __webpack_require__(15)
 /* script */
-var __vue_script__ = __webpack_require__(78)
+var __vue_script__ = __webpack_require__(68)
 /* template */
-var __vue_template__ = __webpack_require__(79)
+var __vue_template__ = __webpack_require__(69)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52,17 +52,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 76:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(77);
+var content = __webpack_require__(67);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(15)("f7e4684a", content, false, {});
+var update = __webpack_require__(16)("f7e4684a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -79,7 +79,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 77:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(4)(false);
@@ -94,14 +94,15 @@ exports.push([module.i, "\nspan[data-v-2badb436] {\n  font-size: 12px;\n}\nhr[da
 
 /***/ }),
 
-/***/ 78:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_logo_png__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_logo_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__image_logo_png__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_logo_png__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_logo_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__image_logo_png__);
 //
 //
 //
@@ -183,6 +184,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 
@@ -190,7 +192,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     name: "app",
     data: function data() {
         return {
-            image: __WEBPACK_IMPORTED_MODULE_1__image_logo_png___default.a,
+            type: 'user',
+            image: __WEBPACK_IMPORTED_MODULE_2__image_logo_png___default.a,
             username: '',
             email: '',
             password: '',
@@ -210,6 +213,40 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         redirect: function redirect(route) {
             __WEBPACK_IMPORTED_MODULE_0__router__["a" /* default */].push(route).catch(function () {});
         },
+        register: function register() {
+            this.validate('username');
+            this.validate('email');
+            this.validate('password');
+            this.validate('confirmPass');
+            var parameter = {
+                account_type: this.type,
+                name: this.username,
+                email: this.email,
+                password: this.password,
+                password_confirmation: this.confirmPass
+            };
+            if (this.errorMessage === null && this.errorMessage2 === null && this.errorMessage3 === null && this.errorMessage4 === null && this.errorMessage5 === null && this.errorMessage6 === null && this.errorMessage7 === null) {
+                this.$axios.post('http://localhost:8000/register', parameter).then(function (response) {
+                    console.log('response', response);
+                    // if(response.error !== null){
+                    //     if(response.error.status === 100){
+                    //     let message = response.error.message
+                    //     if(typeof message.username !== undefined && typeof message.username !== 'undefined'){
+                    //         this.errorMessage = message.username[0]
+                    //     }else if(typeof message.email !== undefined && typeof message.email !== 'undefined'){
+                    //         this.errorMessage = message.email[0]
+                    //     }
+                    //     }else if(response.data !== null){
+                    //         if(response.data > 0){
+                    //             // this.login()
+                    //         }
+                    //     }
+                    // }
+                    console.log('wlay axios');
+                });
+            }
+        },
+        login: function login() {},
         validate: function validate(input) {
             this.successMessage = null;
             var reqWhiteSpace = /\s/;
@@ -249,7 +286,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 } else {
                     this.errorMessage6 = null;
                 }
-            } else if (this.username.length >= 6 && this.email !== null && this.password !== null && this.password.length >= 6 && this.password.localeCompare(this.confirmPass) === 0 && this.type !== null && AUTH.validateEmail(this.email) === true) {
+            } else if (this.username.length >= 6 && this.email !== null && this.password !== null && this.password.length >= 6 && this.password.localeCompare(this.confirmPass) === 0 && this.type !== null && __WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].validateEmail(this.email) === true) {
                 this.errorMessage = null;
             } else {
                 this.errorMessage7 = 'Please fill in all required fields.';
@@ -269,7 +306,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 79:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -483,7 +520,7 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { type: "confirmPassword", id: "confirmPassword" },
+                attrs: { type: "password", id: "confirmPassword" },
                 domProps: { value: _vm.confirmPass },
                 on: {
                   keyup: function($event) {
@@ -501,60 +538,68 @@ var render = function() {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btnRegister", attrs: { type: "submit" } },
+              {
+                staticClass: "btn btnRegister",
+                attrs: { type: "submit" },
+                on: { click: _vm.register }
+              },
               [_vm._v("Register")]
             )
           ]),
           _vm._v(" "),
-          _c("div", [
-            _c("label", { staticClass: "termsCondition" }, [
-              _vm._v("By signing up, you agree to our "),
-              _c(
-                "b",
-                {
-                  staticClass: "bRegister",
-                  on: {
-                    click: function($event) {
-                      return _vm.redirect("/")
+          _c(
+            "div",
+            [
+              _c("label", { staticClass: "termsCondition" }, [
+                _vm._v("By signing up, you agree to our "),
+                _c(
+                  "b",
+                  {
+                    staticClass: "bRegister",
+                    on: {
+                      click: function($event) {
+                        return _vm.redirect("/")
+                      }
                     }
-                  }
-                },
-                [_vm._v("Terms")]
-              ),
-              _vm._v(" and "),
-              _c(
-                "b",
-                {
-                  staticClass: "bRegister",
-                  on: {
-                    click: function($event) {
-                      return _vm.redirect("/")
+                  },
+                  [_vm._v("Terms")]
+                ),
+                _vm._v(" and "),
+                _c(
+                  "b",
+                  {
+                    staticClass: "bRegister",
+                    on: {
+                      click: function($event) {
+                        return _vm.redirect("/")
+                      }
                     }
-                  }
-                },
-                [_vm._v("Conditions")]
-              )
-            ]),
-            _c("hr")
-          ]),
-          _vm._v(" "),
-          _c("div", [
-            _c("label", { staticClass: "termsCondition" }, [
-              _vm._v("Already have an account? "),
-              _c(
-                "b",
-                {
-                  staticClass: "bRegister",
-                  on: {
-                    click: function($event) {
-                      return _vm.redirect("/")
-                    }
-                  }
-                },
-                [_vm._v("Login")]
-              )
-            ])
-          ])
+                  },
+                  [_vm._v("Conditions")]
+                )
+              ]),
+              _c("hr"),
+              _vm._v(" "),
+              _c("center", [
+                _c("label", { staticClass: "termsCondition" }, [
+                  _vm._v("Already have an account? "),
+                  _c(
+                    "b",
+                    {
+                      staticClass: "bRegister",
+                      on: {
+                        click: function($event) {
+                          return _vm.redirect("/")
+                        }
+                      }
+                    },
+                    [_vm._v("Login")]
+                  )
+                ])
+              ])
+            ],
+            1
+          )
         ])
       ])
     ],
