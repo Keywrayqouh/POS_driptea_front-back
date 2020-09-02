@@ -52846,7 +52846,7 @@ var beforeEnter = function beforeEnter(to, from, next) {
   // TODO Redirect if no token when token is required in meta.tokenRequired
   __WEBPACK_IMPORTED_MODULE_0__services_auth__["a" /* default */].currentPath = to.path;
   var userID = parseInt(localStorage.getItem('account_id'));
-  var token = localStorage.getItem('usertoken');
+  var token = __WEBPACK_IMPORTED_MODULE_0__services_auth__["a" /* default */].token;
   if (token !== null && userID > 0) {
     if (to.path === '/' || to.meta.tokenRequired === false) {
       next({ path: '/home' });
@@ -52888,7 +52888,7 @@ routes = routes.concat(devRoutes);
 // import ROUTER from "router";
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    url: 'http://127.0.0.1:8000',
+    url: 'http://localhost:8000/',
     currentPath: false
 });
 

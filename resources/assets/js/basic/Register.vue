@@ -120,8 +120,14 @@ export default {
                 password_confirmation: this.confirmPass,
             }
             if(this.errorMessage === null && this.errorMessage2 === null && this.errorMessage3 === null && this.errorMessage4 === null && this.errorMessage5 === null && this.errorMessage6 === null && this.errorMessage7 === null){
-                this.$axios.post('http://localhost:8000/register', parameter).then(response => {
-                    console.log('response', response)
+                this.$axios.post(AUTH.url+'register', parameter).then(response => {
+                    AUTH.token = response.data.token
+                    console.log('response', response.data.length)
+                    ROUTER.push(/)
+                    // if(response.data > 0){
+                    // }
+                    // AUTH.token = response.data.token
+                    // this.login()
                     // if(response.error !== null){
                     //     if(response.error.status === 100){
                     //     let message = response.error.message
@@ -132,15 +138,16 @@ export default {
                     //     }
                     //     }else if(response.data !== null){
                     //         if(response.data > 0){
-                    //             // this.login()
+                    //             AUTH.token = response.token
+                    //             this.login()
                     //         }
                     //     }
                     // }
-                    console.log('wlay axios')
                 })
             }
         },
         login(){
+            console.log('token', AUTH.token)
         },
         validate(input){
             this.successMessage = null
