@@ -74,6 +74,32 @@ p{
     font-weight: bold;
     width: 100%;
 }
+@media screen and (max-width: 600px) {
+    .containerWidth{
+        text-align: left;
+        width: 100%;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .containerWidth[data-v-2badb436] {
+        text-align: left;
+        width: 75%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .containerWidth{
+        text-align: left;
+        width: 100%;
+    }
+    .form-group{
+        width: 100%;
+    }
+    .containerWidth[data-v-2badb436] {
+        text-align: left;
+        width: 50%;
+    }
+}
 .containerWidth{
     text-align: left;
     width: 30%;
@@ -123,7 +149,7 @@ export default {
                 this.$axios.post(AUTH.url+'register', parameter).then(response => {
                     AUTH.token = response.data.token
                     console.log('response', response.data.length)
-                    ROUTER.push(/)
+                    ROUTER.push('/')
                     // if(response.data > 0){
                     // }
                     // AUTH.token = response.data.token
@@ -143,6 +169,10 @@ export default {
                     //         }
                     //     }
                     // }
+                }).catch(error => {
+                    if(error.response.status === 300){
+                        this.errorMessage3 = 'Email already exist'
+                    }
                 })
             }
         },

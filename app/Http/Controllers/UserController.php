@@ -26,6 +26,14 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+        //validate if email already exist
+        $input['email'] = $request->get('email');
+        $rules = array('email' => 'unique:users,email');
+        $validate = Validator::make($input, $rules);
+        if ($validate->fails()) {
+            return response()->json($validate->errors()->toJson(), 300);
+        }
+
         $validator = Validator::make($request->all(), [
             'account_type' => 'required|string|max:255',
             'name' => 'required|string|max:255',

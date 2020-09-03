@@ -3,10 +3,15 @@
         <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #17D817"> 
             <img style="height: 50px; margin-left: 2%;" :src="image" v-on:click="redirect('/')">
             <a class="navbar-brand" href="#">Driptea</a>
-            <ul class="navbar-nav ml-auto"> 
-                <li class="nav-item" v-on:click="redirect('/register')"><a class="nav-link">Register</a></li>
-                <li class="nav-item" v-on:click="redirect('/')"><a class="nav-link">Login</a></li>
-            </ul> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-2" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-list-2">
+                <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item" v-on:click="redirect('/register')"><a class="nav-link">Register</a></li>
+                    <li class="nav-item" v-on:click="redirect('/')"><a class="nav-link">Login</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="container">
             <router-view></router-view>

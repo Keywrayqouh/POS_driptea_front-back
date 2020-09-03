@@ -87,7 +87,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\nspan[data-v-2badb436] {\n  font-size: 12px;\n}\nhr[data-v-2badb436] {\n  border: 1px solid #17D817;\n}\n.termsCondition[data-v-2badb436] {\n  margin-top: 6%;\n  font-size: 15px;\n  text-align: center;\n}\n.form-control[data-v-2badb436] {\n  border: 1px solid #17D817;\n  border-radius: 5px;\n}\n.bRegister[data-v-2badb436] {\n  color: #0A8C0F;\n  cursor: pointer;\n}\np[data-v-2badb436] {\n  font-size: 20px;\n}\n.btnRegister[data-v-2badb436] {\n  margin-top: 2%;\n  margin-bottom: 2%;\n  background-color: #17D817;\n  font-weight: bold;\n  width: 100%;\n}\n.containerWidth[data-v-2badb436] {\n  text-align: left;\n  width: 30%;\n}\n", ""]);
+exports.push([module.i, "\nspan[data-v-2badb436] {\n  font-size: 12px;\n}\nhr[data-v-2badb436] {\n  border: 1px solid #17D817;\n}\n.termsCondition[data-v-2badb436] {\n  margin-top: 6%;\n  font-size: 15px;\n  text-align: center;\n}\n.form-control[data-v-2badb436] {\n  border: 1px solid #17D817;\n  border-radius: 5px;\n}\n.bRegister[data-v-2badb436] {\n  color: #0A8C0F;\n  cursor: pointer;\n}\np[data-v-2badb436] {\n  font-size: 20px;\n}\n.btnRegister[data-v-2badb436] {\n  margin-top: 2%;\n  margin-bottom: 2%;\n  background-color: #17D817;\n  font-weight: bold;\n  width: 100%;\n}\n@media screen and (max-width: 600px) {\n.containerWidth[data-v-2badb436] {\n    text-align: left;\n    width: 100%;\n}\n.form-group[data-v-2badb436] {\n    width: 100%;\n}\n.containerWidth[data-v-2badb436][data-v-2badb436] {\n    text-align: left;\n    width: 75%;\n}\n}\n@media screen and (max-width: 900px) {\n.containerWidth[data-v-2badb436] {\n    text-align: left;\n    width: 100%;\n}\n.form-group[data-v-2badb436] {\n    width: 100%;\n}\n.containerWidth[data-v-2badb436][data-v-2badb436] {\n    text-align: left;\n    width: 50%;\n}\n}\n.containerWidth[data-v-2badb436] {\n  text-align: left;\n  width: 30%;\n}\n", ""]);
 
 // exports
 
@@ -95,9 +95,254 @@ exports.push([module.i, "\nspan[data-v-2badb436] {\n  font-size: 12px;\n}\nhr[da
 /***/ }),
 
 /***/ 68:
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/2ndyrGroupC/Documents/capstone/POS_driptea_front&back/resources/assets/js/basic/Register.vue: Unterminated regular expression (126:33)\n\n\u001b[0m \u001b[90m 124 | \u001b[39m                    \u001b[33mAUTH\u001b[39m\u001b[33m.\u001b[39mtoken \u001b[33m=\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mtoken\n \u001b[90m 125 | \u001b[39m                    console\u001b[33m.\u001b[39mlog(\u001b[32m'response'\u001b[39m\u001b[33m,\u001b[39m response\u001b[33m.\u001b[39mdata\u001b[33m.\u001b[39mlength)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 126 | \u001b[39m                    \u001b[33mROUTER\u001b[39m\u001b[33m.\u001b[39mpush(\u001b[33m/\u001b[39m)\n \u001b[90m     | \u001b[39m                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 127 | \u001b[39m                    \u001b[90m// if(response.data > 0){\u001b[39m\n \u001b[90m 128 | \u001b[39m                    \u001b[90m// }\u001b[39m\n \u001b[90m 129 | \u001b[39m                    \u001b[90m// AUTH.token = response.data.token\u001b[39m\u001b[0m\n");
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__router__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_logo_png__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_logo_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__image_logo_png__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "app",
+    data: function data() {
+        return {
+            type: 'user',
+            image: __WEBPACK_IMPORTED_MODULE_2__image_logo_png___default.a,
+            username: '',
+            email: '',
+            password: '',
+            confirmPass: '',
+            successMessage: null,
+            errorMessage: null,
+            errorMessage2: null,
+            errorMessage3: null,
+            errorMessage4: null,
+            errorMessage5: null,
+            errorMessage6: null,
+            errorMessage7: null
+        };
+    },
+
+    methods: {
+        redirect: function redirect(route) {
+            __WEBPACK_IMPORTED_MODULE_0__router__["a" /* default */].push(route).catch(function () {});
+        },
+        register: function register() {
+            var _this = this;
+
+            this.validate('username');
+            this.validate('email');
+            this.validate('password');
+            this.validate('confirmPass');
+            var parameter = {
+                account_type: this.type,
+                name: this.username,
+                email: this.email,
+                password: this.password,
+                password_confirmation: this.confirmPass
+            };
+            if (this.errorMessage === null && this.errorMessage2 === null && this.errorMessage3 === null && this.errorMessage4 === null && this.errorMessage5 === null && this.errorMessage6 === null && this.errorMessage7 === null) {
+                this.$axios.post(__WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].url + 'register', parameter).then(function (response) {
+                    __WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].token = response.data.token;
+                    console.log('response', response.data.length);
+                    __WEBPACK_IMPORTED_MODULE_0__router__["a" /* default */].push('/');
+                    // if(response.data > 0){
+                    // }
+                    // AUTH.token = response.data.token
+                    // this.login()
+                    // if(response.error !== null){
+                    //     if(response.error.status === 100){
+                    //     let message = response.error.message
+                    //     if(typeof message.username !== undefined && typeof message.username !== 'undefined'){
+                    //         this.errorMessage = message.username[0]
+                    //     }else if(typeof message.email !== undefined && typeof message.email !== 'undefined'){
+                    //         this.errorMessage = message.email[0]
+                    //     }
+                    //     }else if(response.data !== null){
+                    //         if(response.data > 0){
+                    //             AUTH.token = response.token
+                    //             this.login()
+                    //         }
+                    //     }
+                    // }
+                }).catch(function (error) {
+                    if (error.response.status === 300) {
+                        _this.errorMessage3 = 'Email already exist';
+                    }
+                });
+            }
+        },
+        login: function login() {
+            console.log('token', __WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].token);
+        },
+        validate: function validate(input) {
+            this.successMessage = null;
+            var reqWhiteSpace = /\s/;
+            if (input === 'username') {
+                this.errorMessage = null;
+                if (reqWhiteSpace.test(this.username)) {
+                    this.errorMessage = 'Username should not contain a space.';
+                } else if (this.username.length < 6) {
+                    this.errorMessage2 = 'Username must be atleast 6 characters.';
+                } else {
+                    this.errorMessage = null;
+                    this.errorMessage2 = null;
+                }
+            } else if (input === 'email') {
+                this.errorMessage3 = null;
+                if (this.validateEmail(this.email) === false) {
+                    this.errorMessage3 = 'You have entered an invalid email address.';
+                } else {
+                    this.errorMessage3 = null;
+                }
+            } else if (input === 'password') {
+                this.errorMessage4 = null;
+                if (this.password.length < 8) {
+                    this.errorMessage4 = 'Password must be atleast 8 characters.';
+                } else if (/^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/.test(this.password)) {
+                    this.successMessage = 'Strong password.';
+                    this.errorMessage4 = null;
+                    this.errorMessage5 = null;
+                } else {
+                    this.errorMessage5 = 'Password must be alphanumeric characters. It should contain 1 number, 1 special character and 1 capital letter.';
+                }
+            } else if (input === 'confirmPass') {
+                this.errorMessage6 = null;
+                this.successMessage = null;
+                if (this.password.localeCompare(this.confirmPass) !== 0) {
+                    this.errorMessage6 = 'Password did not match.';
+                } else {
+                    this.errorMessage6 = null;
+                }
+            } else if (this.username.length >= 6 && this.email !== null && this.password !== null && this.password.length >= 6 && this.password.localeCompare(this.confirmPass) === 0 && this.type !== null && __WEBPACK_IMPORTED_MODULE_1__services_auth__["a" /* default */].validateEmail(this.email) === true) {
+                this.errorMessage = null;
+            } else {
+                this.errorMessage7 = 'Please fill in all required fields.';
+                this.errorMessage7 = null;
+            }
+        },
+        validateEmail: function validateEmail(email) {
+            var reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+.[a-zA-Z0-9]*$/;
+            if (reg.test(email) === false) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+});
 
 /***/ }),
 
