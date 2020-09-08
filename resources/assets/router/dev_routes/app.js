@@ -1,5 +1,5 @@
 
-export default{
+export default {
     routes: [
         {
             path: '/',
@@ -23,6 +23,14 @@ export default{
             component: resolve => require(['@/assets/js/basic/Header'], resolve),
             meta: {
                 tokenRequired: false
+            }
+        },
+        {
+            path: '/userDashboard',
+            name: 'userDashboard',
+            component: resolve => require(['@/assets/js/modules/dashboard/userDashboard'], resolve),
+            meta: {
+                tokenRequired: true
             }
         },
     ],

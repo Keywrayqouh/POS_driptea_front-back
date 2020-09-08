@@ -16,8 +16,8 @@ class OrderHistory extends Migration
         Schema::create('orderHistory', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('accountId');
-            $table->string('productId');
-            $table->integer('orderId');
+            $table->bigInteger('productId');
+            $table->bigInteger('orderId');
             $table->string('orderNumber');
             $table->string('status');
             $table->timestamps();

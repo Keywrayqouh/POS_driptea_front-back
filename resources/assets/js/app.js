@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import axios from 'axios'
 // import '@fortawesome/fontawesome-free'
 
-Vue.prototype.$axios = axios;
+Vue.prototype.$axios = axios
 const app = new Vue({
     icons: {
         iconfont: 'fa'

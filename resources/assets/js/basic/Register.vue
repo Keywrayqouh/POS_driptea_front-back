@@ -129,6 +129,8 @@ export default {
             errorMessage7: null,
         }
     },
+    mounted(){
+    },
     methods: {
         redirect(route){
             ROUTER.push(route).catch(()=>{})
@@ -147,37 +149,16 @@ export default {
             }
             if(this.errorMessage === null && this.errorMessage2 === null && this.errorMessage3 === null && this.errorMessage4 === null && this.errorMessage5 === null && this.errorMessage6 === null && this.errorMessage7 === null){
                 this.$axios.post(AUTH.url+'register', parameter).then(response => {
-                    AUTH.token = response.data.token
-                    console.log('response', response.data.length)
-                    ROUTER.push('/')
-                    // if(response.data > 0){
-                    // }
-                    // AUTH.token = response.data.token
-                    // this.login()
-                    // if(response.error !== null){
-                    //     if(response.error.status === 100){
-                    //     let message = response.error.message
-                    //     if(typeof message.username !== undefined && typeof message.username !== 'undefined'){
-                    //         this.errorMessage = message.username[0]
-                    //     }else if(typeof message.email !== undefined && typeof message.email !== 'undefined'){
-                    //         this.errorMessage = message.email[0]
-                    //     }
-                    //     }else if(response.data !== null){
-                    //         if(response.data > 0){
-                    //             AUTH.token = response.token
-                    //             this.login()
-                    //         }
-                    //     }
-                    // }
+                    console.log('first', response)
+                    AUTH.authenticate(this.username, this.password, response.data.user.id, response.data.user.name, response.data.user.account_type)
                 }).catch(error => {
                     if(error.response.status === 300){
                         this.errorMessage3 = 'Email already exist'
                     }
                 })
+            }else{
+                this.errorMessage = 'Please fill up all fields'
             }
-        },
-        login(){
-            console.log('token', AUTH.token)
         },
         validate(input){
             this.successMessage = null

@@ -29,7 +29,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		3: 0
+/******/ 		5: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -14728,11 +14728,51 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// import ROUTER from "router";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(5);
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     url: 'http://localhost:8000/',
-    currentPath: false
+    currentPath: false,
+    productName: '',
+    productPrice: null,
+    imageSelected: null,
+    token: null,
+    user: {
+        userId: null,
+        username: null,
+        userType: null
+    },
+    authenticate: function authenticate(username, password) {
+        var id = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+        var _this = this;
+
+        var name = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+        var userType = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : null;
+
+        var credentials = {
+            name: username,
+            password: password
+        };
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(this.url + 'login', credentials).then(function (response) {
+            _this.token = response.data.token;
+            localStorage.setItem('userToken', response.data.token);
+            _this.setUser(id, name, userType);
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(_this.url + 'user', {}).then(function (res) {
+                __WEBPACK_IMPORTED_MODULE_1__router__["a" /* default */].push('/userDashboard');
+            });
+        });
+    },
+    setUser: function setUser(userId, username, userType) {
+        this.user.userId = userId * 1;
+        this.user.username = username;
+        this.user.userType = userType;
+        localStorage.setItem('userId', this.user.userId);
+    },
+    logout: function logout() {}
 });
 
 /***/ }),
@@ -52862,8 +52902,8 @@ var beforeEnter = function beforeEnter(to, from, next) {
   // localStorage.setItem('usertoken', 'abcde')
   // TODO Redirect if no token when token is required in meta.tokenRequired
   __WEBPACK_IMPORTED_MODULE_0__services_auth__["a" /* default */].currentPath = to.path;
-  var userID = parseInt(localStorage.getItem('account_id'));
-  var token = __WEBPACK_IMPORTED_MODULE_0__services_auth__["a" /* default */].token;
+  var userID = localStorage.getItem('userId');
+  var token = localStorage.getItem('userToken');
   if (token !== null && userID > 0) {
     if (to.path === '/' || to.meta.tokenRequired === false) {
       next({ path: '/home' });
@@ -52918,7 +52958,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         path: '/register',
         name: 'register',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(61)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(7).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(61)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         },
         meta: {
             tokenRequired: false
@@ -52927,10 +52967,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         path: '/header',
         name: 'header',
         component: function component(resolve) {
-            return __webpack_require__.e/* require */(2).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(62)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+            return __webpack_require__.e/* require */(8).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(62)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
         },
         meta: {
             tokenRequired: false
+        }
+    }, {
+        path: '/userDashboard',
+        name: 'userDashboard',
+        component: function component(resolve) {
+            return __webpack_require__.e/* require */(6).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(63)]; ((resolve).apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
+        },
+        meta: {
+            tokenRequired: true
         }
     }]
 });
