@@ -17,6 +17,8 @@
 Route::get('/{any}', 'SpaController@index')->where('any', '.*');
 Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@authenticate');
+Route::post('formSubmit','ImageController@formSubmit');
+Route::post('retrieveProduct','ImageController@retrieveProduct');
 
 Route::group(['middleware' => ['jwt.verify']], function() {
     Route::get('user', 'UserController@getAuthenticatedUser');

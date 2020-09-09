@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+        <div class="d-flex flex-row-reverse">
+            <button v-if="auth.user.userType === 'ADMIN'" class="btn btn-success" style="margin-top: 3%;" @click="redirect('/addProduct')">Add Product</button>
+        </div>
         <div class="row rowMargin">
             <div class="col-md-4" v-for="(item, index) in data" :key="index" style="margin-bottom: 3%;">
                 <div class="product" data-toggle="modal" data-target="#viewDetails">
@@ -10,6 +13,7 @@
                         <div class="col-md-7" style="text-align: left">
                             <h5>Product Name</h5>
                             <h6>Price: Php50.00</h6>
+                            <button v-if="auth.user.userType === 'ADMIN'" class="btn btn-success" style="width: 70%; margin-top: 6%;" @click="edit(item)">Edit</button>
                         </div>
                     </div>
                 </div>
@@ -107,7 +111,6 @@
                         <button type="button" class="btn btn-danger" data-dismiss="modal" @click="cancel">Cancel</button>
                     </div>
                 </div>
-            
             </div>
         </div>
     </div>
@@ -194,6 +197,7 @@ import AUTH from '../../../services/auth'
 export default {
     data(){
         return{
+            auth: AUTH,
             image: image,
             image1: image1,
             data: [1,2,3,4,5,6,7,8,9,8,7,6],
@@ -208,6 +212,18 @@ export default {
         cancel(){
             this.sinkers = []
             this.addOns = []
+        },
+        retrieve(){
+            this.$axios.post(AUTH.url+'retrieveProduct').then(response => {
+                this.data = response.data.product
+            })
+        },
+        redirect(route){
+            ROUTER.push(route).catch(()=>{})
+        },
+        edit(param){
+            this.$emit('retrieveData', param)
+            ROUTER.push('/addProduct').catch(()=>{})
         }
     }
 }

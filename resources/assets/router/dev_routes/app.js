@@ -30,7 +30,23 @@ export default {
             name: 'userDashboard',
             component: resolve => require(['@/assets/js/modules/dashboard/userDashboard'], resolve),
             meta: {
+                tokenRequired: false
+            }
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: resolve => require(['@/assets/js/modules/profile/profile'], resolve),
+            meta: {
                 tokenRequired: true
+            }
+        },
+        {
+            path: '/addProduct',
+            name: 'addProduct',
+            component: resolve => require(['@/assets/js/modules/product/addProduct'], resolve),
+            meta: {
+                tokenRequired: false
             }
         },
     ],
